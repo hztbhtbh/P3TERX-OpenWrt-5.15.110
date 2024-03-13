@@ -36,6 +36,16 @@ jobs:
     - name: Checkout
       uses: actions/checkout@main
 
+    - name: Free Disk Space (Ubuntu)
+      uses: jlumbroso/free-disk-space@main
+      with:
+       tool-cache: true         
+       android: true
+       dotnet: true
+       haskell: true
+       large-packages: true
+       swap-storage: true 
+
     - name: Initialization environment
       env:
         DEBIAN_FRONTEND: noninteractive
